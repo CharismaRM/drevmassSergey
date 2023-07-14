@@ -138,6 +138,17 @@ h6 {
   padding: 0 0.9375rem;
 }
 
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0px 0px;
+}
+
+.button._fw {
+  width: 100%;
+}
+
 input[type=text],
 input[type=email],
 input[type=tel],
@@ -157,6 +168,51 @@ textarea {
   border-radius: 8px;
   border: 2px solid #E2E3E4;
   background: #FFF;
+}
+
+.input::-webkit-input-placeholder {
+  font-family: Public Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 150% */
+}
+
+.input::-moz-placeholder {
+  font-family: Public Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 150% */
+}
+
+.input:-ms-input-placeholder {
+  font-family: Public Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 150% */
+}
+
+.input::-ms-input-placeholder {
+  font-family: Public Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 150% */
+}
+
+.input::placeholder {
+  font-family: Public Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 150% */
 }
 
 textarea.input {
@@ -476,21 +532,6 @@ body::after {
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
-.btn:focus {
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
-  background: #80C9C4;
-  /* тень */
-}
-
-.btn:active {
-  background: #D5D5D5;
-  /* тень */
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-}
-
 .paragraph {
   border-radius: 12px;
   background: #FFF;
@@ -606,7 +647,7 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 60px;
+  gap: 30px;
   padding: 10px 0px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -630,15 +671,15 @@ body::after {
           align-items: center;
   gap: 20px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 20%;
-          flex: 0 1 20%;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
 }
 
 .header__text {
-  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #585149;
+  font-family: "OnestMedium";
 }
 
 .header__menu {
@@ -688,6 +729,7 @@ body::after {
   font-size: 25px;
   line-height: 35px;
   /* identical to box height */
+  font-family: "OnestMedium";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -924,7 +966,7 @@ body::after {
 
 .footer__title {
   font-size: 24px;
-  font-family: Madeevolvesansmedium;
+  font-family: "OnestMedium";
   margin: 20px 0px 20px 0px;
 }
 
@@ -957,12 +999,12 @@ body::after {
 
 .footer__number {
   font-size: 25px;
-  font-family: Madeevolvesansmedium;
+  font-family: "OnestRegular";
 }
 
 .footer__calls {
   font-size: 19px;
-  font-family: Madeevolvesansmedium;
+  font-family: "OnestRegular";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1371,7 +1413,7 @@ body::after {
 .mainscreen__btn {
   color: #FFF;
   text-align: center;
-  font-family: Onest;
+  font-family: "OnestMedium";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -1435,13 +1477,11 @@ body::after {
 }
 
 .youtube__text {
-  font-family: "Comfortaa";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
+  font-family: "OnestRegular";
   line-height: 136%;
   color: #3B3B40;
   margin: 0px 0px 64px 0px;
+  text-align: center;
 }
 
 .youtube__videos {
@@ -1499,6 +1539,7 @@ body::after {
           justify-content: center;
   position: relative;
   cursor: pointer;
+  gap: 10px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 30%;
           flex: 0 1 30%;
@@ -1513,6 +1554,11 @@ body::after {
   background: #00B1AA;
   -webkit-box-shadow: 0px 0px 30px #00B1AA;
           box-shadow: 0px 0px 30px #00B1AA;
+}
+
+.youtube__image {
+  position: relative;
+  width: 100%;
 }
 
 .youtube__play {
@@ -1584,9 +1630,6 @@ body::after {
 }
 
 .block__more {
-  -webkit-transform: translate(0px, -150%);
-      -ms-transform: translate(0px, -150%);
-          transform: translate(0px, -150%);
   z-index: 3;
 }
 
@@ -1634,6 +1677,7 @@ body::after {
   border-bottom: #49B2A5 dashed;
   font-size: 16px;
   line-height: 24px;
+  font-family: "OnestRegular";
 }
 
 .order__form {
@@ -1860,6 +1904,10 @@ body::after {
     margin-bottom: 3.5rem;
   }
 
+  .youtube__text {
+    font-size: 1.125rem;
+  }
+
   .order__title {
     font-size: 2rem;
   }
@@ -1964,6 +2012,10 @@ body::after {
 
   .youtube__title {
     margin-bottom: 1.5rem;
+  }
+
+  .youtube__text {
+    font-size: 0.875rem;
   }
 
   .order__title {
@@ -2299,12 +2351,6 @@ body::after {
             flex: 0 1 48%;
   }
 
-  .youtube__text {
-    font-size: 18px;
-    line-height: 140%;
-    margin: 0px 0px 24px 0px;
-  }
-
   .youtube__video {
     padding-bottom: 45px;
   }
@@ -2394,9 +2440,9 @@ body::after {
   }
 
   .order__image_posture {
-    -webkit-transform: translate(30%, 70px);
-        -ms-transform: translate(30%, 70px);
-            transform: translate(30%, 70px);
+    -webkit-transform: translate(30%, 50px);
+        -ms-transform: translate(30%, 50px);
+            transform: translate(30%, 50px);
     right: 0;
     top: 0;
   }
@@ -2604,6 +2650,18 @@ body::after {
 @supports not (margin-bottom: clamp( 1.5rem , 0.6578947368rem  +  4.2105263158vw , 3.5rem )) {
     .youtube__title {
       margin-bottom: calc(1.5rem + 2 * (100vw - 20rem) / 47.5);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.7697368421rem  +  0.5263157895vw , 1.125rem )) {
+    .youtube__text {
+      font-size: clamp( 0.875rem , 0.7697368421rem  +  0.5263157895vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.7697368421rem  +  0.5263157895vw , 1.125rem )) {
+    .youtube__text {
+      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 47.5);
     }
 }
 
