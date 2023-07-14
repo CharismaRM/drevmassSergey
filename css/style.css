@@ -1630,6 +1630,9 @@ body::after {
 }
 
 .block__more {
+  -webkit-transform: translate(0px, -150%);
+      -ms-transform: translate(0px, -150%);
+          transform: translate(0px, -150%);
   z-index: 3;
 }
 
