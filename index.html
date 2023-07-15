@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230715184332">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230715212109">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,7 +72,7 @@
 					</div>
 					<div data-popup="#popupform" class="header__choose">
 						<div class="header__icon-bottom"><picture><source srcset="img/header/massage.webp" type="image/webp"><img src="img/header/massage.png" alt=""></picture></div>
-						<p>Подберем Вам тренажер</p> <span>Заказать звонок </span>
+						<p>Подберем Вам тренажер</p> <span data-popup=".popupform">Заказать звонок </span>
 					</div>
 				</div>
 			</div>
@@ -351,7 +351,7 @@
 					<div class="youtube__body">
 						<h2 class="youtube__title title">Посмотрите авторскую методику как правильно заниматься Древмасс и улучшить здоровье спины за 7 минут в день</h2>
 
-						<div data-showmore="" class="youtube__content">
+						<div data-showmore class="youtube__content">
 							<div data-showmore-content="450" class="youtube__videos">
 								<div data-popup="#popupone" data-popup-youtube="ws0pdqq3y2g" class="youtube__video">
 									<div class="youtube__image">
@@ -434,12 +434,11 @@
 									</div>
 									<div class="youtube__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, nobis!</div>
 								</div>
-
 							</div>
-							<button hidden data-showmore-button type="button" class="block__more btn therapy__btn">
-								<span>Посмотреть методику</span>
+							<div hidden data-showmore-button class="block__more  btn therapy__btn">
+								<span data-goto=".footer">Посмотреть методику</span>
 								<span>Скрыть</span>
-							</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -534,7 +533,30 @@ padding: 6px;" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channe
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20230715184332"></script>
+
+	<div id="popupform" aria-hidden="true" class="popup popupform">
+		<div class="popup__wrapper">
+			<div class="popup__content callback">
+				<div class="callback__header">
+					<h2 class="callback__title ">Заказать звонок</h2>
+					<button data-close type="button" class="popup__close"></button>
+				</div>
+				<h3 class="callback__subtitle">Мы перезвоним Вам и ответим на Ваши вопросы</h3>
+				<div class="callback__form form">
+					<div class="form__line ">
+						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваше Имя" class="input ">
+						<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Телефон" class="input ">
+					</div>
+
+
+				</div>
+				<div class="callback__text ">Количество товара ограничено! <br> Закажите Древмасс сейчас!</div>
+				<button type="button" data-popup="#popupthx" type="submit" class="button therapy__btn">Отправить</button>
+
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230715212109"></script>
 </body>
 
 </html>

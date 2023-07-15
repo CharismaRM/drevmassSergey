@@ -142,7 +142,19 @@ h6 {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 0px 0px;
+  padding: 9px 60px;
+  margin: 30px 0px 0px 0px;
+  background: #00B1AA;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.1578947368;
+  text-align: center;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .button._fw {
@@ -166,6 +178,7 @@ textarea {
   border-radius: 8px;
   border: 2px solid #E2E3E4;
   background: #FFF;
+  margin: 0px 0px 20px 0px;
 }
 
 .input::-webkit-input-placeholder {
@@ -408,10 +421,6 @@ body::after {
   transition: all 0.3s ease 0s;
 }
 
-.popup__close:hover {
-  background: url("../img/hover.svg") 0 0 no-repeat;
-}
-
 .thx {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -448,6 +457,128 @@ body::after {
   color: #fff;
   text-align: center;
   line-height: 1.4375;
+}
+
+.callback {
+  max-width: 480px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 40px;
+}
+
+.callback__header {
+  background: #00B1AA;
+  padding: 16px 0px;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  margin: 0px 0px 10px 0px;
+  position: relative;
+}
+
+.callback__title {
+  text-align: center;
+  color: #fff;
+  font-family: "Madeevolvesansmedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666666667;
+}
+
+.callback__subtitle {
+  font-family: "Madeevolvesans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.5789473684;
+  margin: 0px 0px 40px 0px;
+  text-align: center;
+}
+
+.callback__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 0px 25px;
+}
+
+.callback__text {
+  font-family: "Madeevolvesans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.0526315789;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: url("../img/close.svg") 0 0 no-repeat;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.thx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 320px;
+  height: 320px;
+  position: relative;
+  background: #00B1AA;
+}
+
+.thx__title {
+  color: #fff;
+  font-family: "Madeevolvesansmedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.4375;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.thx__text {
+  color: #fff;
+  text-align: center;
+  line-height: 1.4375;
+  margin: 0px 0px 10px 0px;
 }
 
 [data-showmore-button] span:last-child {
@@ -1707,7 +1838,6 @@ body::after {
 
 .order__form {
   margin: 36px 0px 0px 0px;
-  gap: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1721,7 +1851,6 @@ body::after {
 }
 
 .order__btn {
-  margin: 32px 0px 0px 0px;
   text-align: center;
   width: 100%;
   padding: 16px 32px;
@@ -2291,6 +2420,15 @@ body::after {
 }
 
 @media (max-width: 47.99875em) {
+  .callback {
+    max-width: 320px;
+  }
+
+  .thx {
+    width: 320px;
+    height: 280px;
+  }
+
   .callback {
     max-width: 320px;
   }
@@ -2934,6 +3072,14 @@ body::after {
       margin-bottom: calc(0.0000000625rem + 9.3749999375 * (100vw - 20rem) / 47.5);
     }
 }
+}
+
+@media (any-hover: hover) {
+  .button:hover {
+    -webkit-transform: translate(0px, -5px);
+        -ms-transform: translate(0px, -5px);
+            transform: translate(0px, -5px);
+  }
 }
 
 .webp .srgeyreviw__image{ background: -webkit-gradient(linear, left bottom, left top, from(rgba(3, 3, 3, 0.3)), to(rgba(3, 3, 3, 0.3))), url(../img/srgeyreviw/video.webp), lightgray -281.442px -226.893px/190.861% 214.719% no-repeat; }
