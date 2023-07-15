@@ -1989,6 +1989,18 @@ body::after {
   opacity: 0.3000000119;
 }
 
+.fancybox__container {
+  min-width: 100vw;
+}
+
+.fancybox__container .carousel__nav {
+  display: none;
+}
+
+.fancybox__container .carousel__button {
+  display: none;
+}
+
 @media (min-width: 67.5em) {
   .title {
     font-size: 2rem;
@@ -2653,6 +2665,10 @@ body::after {
             transform: translate(30%, 50px);
     right: 0;
     top: 0;
+  }
+
+  .fancybox__container {
+    min-width: 90vw;
   }
 }
 
