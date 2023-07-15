@@ -739,6 +739,7 @@
         imageFive.classList.remove("_opacity");
         imageSpkie.classList.remove("_opacity");
     }));
+    Fancybox.bind("[data-fancybox]", {});
     window["FLS"] = true;
     isWebp();
     menuInit();
