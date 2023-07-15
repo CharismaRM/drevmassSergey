@@ -1470,8 +1470,8 @@ body::after {
 
 .mainscreen__desctiption {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 38%;
-          flex: 0 1 38%;
+      -ms-flex: 0 1 39%;
+          flex: 0 1 39%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
