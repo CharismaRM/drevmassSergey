@@ -1516,6 +1516,7 @@ body::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
+  padding-bottom: 100px;
 }
 
 .youtube__videos::before {
