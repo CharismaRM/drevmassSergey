@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230716000449">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230717023732">
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20230716000449" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?_v=20230717023732" />
 
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -354,8 +354,8 @@
 					<div class="youtube__body">
 						<h2 class="youtube__title title">Посмотрите авторскую методику как правильно заниматься Древмасс и улучшить здоровье спины за 7 минут в день</h2>
 
-						<div data-showmore class="youtube__content">
-							<div data-showmore-content="450" class="youtube__videos">
+						<div class="youtube__content">
+							<ul class="youtube__videos showMore__OpenAll">
 								<a href="https://youtu.be/in3rekq4SxI" data-fancybox class="youtube__video">
 									<div class="youtube__image">
 										<picture><source srcset="img/youtube/photo1.webp" type="image/webp"><img src="img/youtube/photo1.jpeg" alt="video"></picture>
@@ -437,11 +437,11 @@
 									</div>
 									<div class="youtube__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, nobis!</div>
 								</a>
-							</div>
-							<div hidden data-showmore-button class="block__more  btn therapy__btn">
-								<span data-goto=".footer">Посмотреть методику</span>
-								<span>Скрыть</span>
-							</div>
+							</ul>
+							<button hidden data-showmore-button type="button" class="show__more btn therapy__btn">
+								<span class="showmore-close">Посмотреть методику</span>
+								<span class="showmore-open disabled">Скрыть</span>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -559,8 +559,20 @@ padding: 6px;" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channe
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20230716000449"></script>
-	<script src="js/app.min.js?_v=20230716000449"></script>
+
+	<div id="popupthx" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content thx">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="thx__title">СПАСИБО!</div>
+				<div class="thx__text">Сейчас на ваш номер должна <br> прийти смс с номера Древмасс.</div>
+				<div class="thx__text"> Наши менеджеры свяжутся с <br> Вами в ближайшее время.</div>
+
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?_v=20230717023732"></script>
+	<script src="js/app.min.js?_v=20230717023732"></script>
 </body>
 
 </html>

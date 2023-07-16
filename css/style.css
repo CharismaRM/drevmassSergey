@@ -366,7 +366,7 @@ body::after {
 .callback__title {
   text-align: center;
   color: #fff;
-  font-family: "MADE Evolve Sans";
+  font-family: "OnestMedium";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -374,7 +374,7 @@ body::after {
 }
 
 .callback__subtitle {
-  font-family: "MADE Evolve Sans";
+  font-family: "OnestMedium";
   font-style: normal;
   font-weight: 400;
   font-size: 19px;
@@ -396,7 +396,7 @@ body::after {
 }
 
 .callback__text {
-  font-family: "MADE Evolve Sans";
+  font-family: "OnestRegular";
   font-style: normal;
   font-weight: 400;
   font-size: 19px;
@@ -443,7 +443,7 @@ body::after {
 
 .thx__title {
   color: #fff;
-  font-family: "MADE Evolve Sans";
+  font-family: "OnestMedium";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -487,7 +487,7 @@ body::after {
 .callback__title {
   text-align: center;
   color: #fff;
-  font-family: "Madeevolvesansmedium";
+  font-family: "OnestMedium";
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -495,7 +495,7 @@ body::after {
 }
 
 .callback__subtitle {
-  font-family: "Madeevolvesans";
+  font-family: "OnestRegular";
   font-style: normal;
   font-weight: 400;
   font-size: 19px;
@@ -517,7 +517,7 @@ body::after {
 }
 
 .callback__text {
-  font-family: "Madeevolvesans";
+  font-family: "OnestRegular";
   font-style: normal;
   font-weight: 400;
   font-size: 19px;
@@ -564,7 +564,7 @@ body::after {
 
 .thx__title {
   color: #fff;
-  font-family: "Madeevolvesansmedium";
+  font-family: "OnestMedium";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -579,18 +579,6 @@ body::after {
   text-align: center;
   line-height: 1.4375;
   margin: 0px 0px 10px 0px;
-}
-
-[data-showmore-button] span:last-child {
-  display: none;
-}
-
-._showmore-active [data-showmore-button] span {
-  display: none;
-}
-
-._showmore-active [data-showmore-button] span:last-child {
-  display: block;
 }
 
 [class*=-ibg] {
@@ -1648,18 +1636,32 @@ body::after {
           justify-content: space-between;
   position: relative;
   padding-bottom: 100px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-.youtube__videos::before {
+.youtube .showMore__OpenAll {
+  position: relative;
+}
+
+.youtube .showMore__OpenAll::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   width: 100%;
-  height: 144px;
+  height: 200px;
   background: -webkit-gradient(linear, left bottom, left top, from(#F1F5F7), to(rgba(241, 245, 247, 0)));
   background: linear-gradient(360deg, #F1F5F7 0%, rgba(241, 245, 247, 0) 100%);
   z-index: 2;
+}
+
+.showMore__OpenAll .youtube .showMore__OpenAll::before {
+  display: none;
+}
+
+.youtube .disabled {
+  display: none;
 }
 
 .youtube .content {
@@ -1693,6 +1695,8 @@ body::after {
   position: relative;
   cursor: pointer;
   gap: 10px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 30%;
           flex: 0 1 30%;
@@ -1707,6 +1711,10 @@ body::after {
   background: #00B1AA;
   -webkit-box-shadow: 0px 0px 30px #00B1AA;
           box-shadow: 0px 0px 30px #00B1AA;
+}
+
+.youtube .youtube__video.is-visible {
+  display: block;
 }
 
 .youtube__image {
@@ -1782,7 +1790,7 @@ body::after {
           align-items: center;
 }
 
-.block__more {
+.show__more {
   -webkit-transform: translate(0px, -150%);
       -ms-transform: translate(0px, -150%);
           transform: translate(0px, -150%);
@@ -1999,6 +2007,12 @@ body::after {
 
 .fancybox__container .carousel__button {
   display: none;
+}
+
+@media (min-width: 47.99875em) {
+  .youtube__video:nth-child(n+7) {
+    display: none;
+  }
 }
 
 @media (min-width: 67.5em) {
@@ -2583,6 +2597,10 @@ body::after {
 
   .youtube__video:nth-child(3) {
     margin: 0px 0px 20px 0px;
+  }
+
+  .youtube__video:nth-child(n+4) {
+    display: none;
   }
 
   .page__order {

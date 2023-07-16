@@ -740,6 +740,22 @@
         imageSpkie.classList.remove("_opacity");
     }));
     Fancybox.bind("[data-fancybox]", {});
+    const script_showMore = document.querySelector(".show__more");
+    const showMoreOpenAll = document.querySelector(".youtube__videos");
+    const productsAll = document.querySelectorAll(".youtube__video").length;
+    const showMoreOpen = document.querySelector(".showmore-open");
+    const showMoreClose = document.querySelector(".showmore-close");
+    console.log(productsAll);
+    let items = 6;
+    script_showMore.addEventListener("click", (function(e) {
+        items += 3;
+        const array = Array.from(document.querySelector(".youtube__videos").children);
+        const visItems = array.slice(0, items);
+        visItems.forEach((el => el.classList.toggle("is-visible")));
+        showMoreOpen.classList.toggle("disabled");
+        showMoreClose.classList.toggle("disabled");
+        showMoreOpenAll.classList.toggle("showMore__OpenAll");
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
