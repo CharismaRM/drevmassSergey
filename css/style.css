@@ -179,6 +179,20 @@ textarea {
   border: 2px solid #E2E3E4;
   background: #FFF;
   margin: 0px 0px 20px 0px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.input:hover {
+  border: 2px solid #C8CDD1;
+}
+
+.input:focus {
+  border: 2px solid #48C1B1;
+  background: #FFF;
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(72, 193, 177, 0.2);
+          box-shadow: 0px 0px 0px 3px rgba(72, 193, 177, 0.2);
+  outline: none;
 }
 
 .input::-webkit-input-placeholder {
@@ -1842,6 +1856,12 @@ body::after {
   font-size: 16px;
   line-height: 24px;
   font-family: "OnestRegular";
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.order__link:hover {
+  border-bottom: none;
 }
 
 .order__form {
